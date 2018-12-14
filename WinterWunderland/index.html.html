@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+
+<head>
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=0.5">
+<title>WINTER'S WONDERLAND</title>
+<link rel="shortcut icon" href="snowflake.ico">
+<link href="https://fonts.googleapis.com/css?family=Caveat|Cookie" rel="stylesheet">
+<style>
+.w3-myfont1 {
+	font-family: "Cookie";
+}
+.w3-myfont2 {
+	font-family: "Caveat";
+}
+</style>
+</head>
+
+<body>
+<div class="w3-container w3-display-container" id="parentElement">
+	<h1 class="w3-animate-left w3-margin w3-myfont1">Das Weihnachtsgeschenk</h1>
+	<h2 class="w3-animate-left w3-margin w3-myfont1">1. Schritt zum Passwort</h2>
+	<div class="w3-card-4 w3-light-gray w3-animate-opacity w3-padding" style="width:90%">
+		<h3 class="w3-margin w3-myfont2">Das Passwort hat etwas mit diesem Bild zu tun.</h3>
+		<h3 class="w3-margin w3-myfont2">Welches Wort kommt hierbei raus?</h3>
+		<img src="puzzle1.jpg" class="w3-padding" style="width:100%" alt="Bild1 laedt nicht... Loesung: Weihnachten">
+	</div>
+	<h2 class="w3-animate-left w3-margin w3-myfont1">2. Schritt zum Passwort</h2>
+	<div class="w3-card-4 w3-light-gray w3-animate-opacity w3-padding" style="width:90%">
+		<h3 class="w3-margin w3-myfont2">Wandle das Wort nun in das Passwort um!</h3>
+		<img src="Rätsel2.png" class="w3-padding" style="width:100%" alt="Bild2 laedt nicht... Loesung: Weihnachten">
+	</div>
+	<br/>
+	<div class="w3-card-4 w3-round-xlarge w3-blue-gray w3-animate-bottom w3-padding" style="width:60%">
+		<h4 class="w3-text-white w3-padding">Deine Eingabe:</h4>
+		<p><input class="w3-input w3-center" type="text" style="width:50%" id="enteredtext">
+		<button class="w3-button w3-teal w3-padding w3-round-xlarge" type="button" onclick="myFunction()">Bestätigen</button></p>
+		<br/>
+	</div>
+	<br/>
+	<h6 class="w3-display-bottomright">powered by W3.CSS</h6>
+</div>
+
+<script>
+function myFunction() {
+	function sleep(ms) {
+	  return new Promise(resolve => setTimeout(resolve, ms));
+	}
+	function inject(){
+		var html = '<img src="https://media.giphy.com/media/3oEdv3Ul8g6BCngQ36/giphy.gif" class="w3-display-center w3-animate-zoom " style="width:50%">';
+		document.getElementById("parentElement").innerHTML = html;
+	}
+	async function runifcorrect() {
+		inject();
+		await sleep(4000);
+		location.href = "geschenk.html";
+	}
+//CHEATER
+//DU SOLLST DOCH NICHT SPICKEN >:|
+//ABER TOLL, DASS DU AUFMERKSAM BIST :D
+    if(document.getElementById("enteredtext").value == "288121319481325819"){
+		runifcorrect();
+    	
+
+    };
+
+}
+</script>
+
+
+</body>
+</html>
